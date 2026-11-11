@@ -1,0 +1,25 @@
+# JD ANALYSIS — Cloudflare Worker local secrets template
+# Copy this file to .dev.vars and fill in your own values.
+# Wrangler reads .dev.vars when running `npm run dev` / `wrangler dev`.
+# Never commit or share the real .dev.vars file.
+
+# Required by the deployed Worker. APP_PASSWORD may be left empty only
+# for the bundled localhost launcher, which enables LOCAL_AUTH_BYPASS.
+APP_PASSWORD=
+
+# Required for the Worker database-backed history / statistics APIs.
+# Use the PostgreSQL connection string from your Neon project.
+DATABASE_URL=
+
+# Optional AI provider keys (features needing an unconfigured provider will be unavailable).
+GEMINI_API_KEY=
+DEEPSEEK_API_KEY=
+
+# Optional market data and news keys.
+TWELVEDATA_API_KEY=
+FINNHUB_API_KEY=
+
+# Optional Telegram delivery. Leave blank until you create a Telegram bot
+# and obtain its token and destination chat ID.
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_CHAT_ID=
